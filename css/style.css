@@ -1,18 +1,18 @@
-@import url(/reset.css);
+@import url(./reset.css);
 
 @font-face {
     font-family: Sans-Regular;
-    src: url(/Projects/TravelWebsite/assets/font/DM_Sans/static/DMSans-Regular.ttf);
+    src: url(../assets/font/DM_Sans/static/DMSans-Regular.ttf);
 }
 
 @font-face {
     font-family: Sans-Bold;
-    src: url(/Projects/TravelWebsite/assets/font/DM_Sans/static/DMSans-Bold.ttf);
+    src: url(../assets/font/DM_Sans/static/DMSans-Bold.ttf);
 }
 
 @font-face {
     font-family: Sans-Italic;
-    src: url(/Projects/TravelWebsite/assets/font/DM_Sans/static/DMSans-Italic.ttf);
+    src: url(../assets/font/DM_Sans/static/DMSans-Italic.ttf);
 }
 
 :root {
@@ -65,7 +65,7 @@ p{
 /*-----header section-----*/
 
 .header-container {
-    background-image: linear-gradient(rgba(0,0,0,0.3)), url(/Projects/TravelWebsite/assets/images/banner.png);
+    background-image: linear-gradient(rgba(0,0,0,0.3)), url(../assets/images/banner.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -397,7 +397,7 @@ p{
 
 .cta-container {
     width: 90%;
-    background-image: linear-gradient(to right, #3f2321, transparent), url(/Projects/TravelWebsite/assets/images/banner-2.png);
+    background-image: linear-gradient(to right, #3f2321, transparent), url(../assets/images/banner-2.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1302,5 +1302,6 @@ p{
     }
 
     /*-----housing page ends here---------*/
+
 
 }
