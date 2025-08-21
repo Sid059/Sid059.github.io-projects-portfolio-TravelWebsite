@@ -1,0 +1,1306 @@
+@import url(/reset.css);
+
+@font-face {
+    font-family: Sans-Regular;
+    src: url(/Projects/TravelWebsite/assets/font/DM_Sans/static/DMSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: Sans-Bold;
+    src: url(/Projects/TravelWebsite/assets/font/DM_Sans/static/DMSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: Sans-Italic;
+    src: url(/Projects/TravelWebsite/assets/font/DM_Sans/static/DMSans-Italic.ttf);
+}
+
+:root {
+    --p: 16px;
+    --h1: 2.986rem;
+    --h2: 2.488rem;
+    --h3: 2.074rem;
+    --h4: 1.728rem;
+    --h5: 1.44rem;
+    --h6: 1.2rem;
+    --a: 20px;
+    --whiteShade: #f2f2f2;
+    --blackShade: #2c2c2c;
+    --grayShade: #F5F5F5;
+    --RedColor: #ff5361;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+button, a, li{
+    cursor: pointer;
+}
+
+p, a ,label,input,span, button,li,b {
+    font-family: Sans-Regular;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: Sans-Regular;
+}
+
+h1 {
+    font-size: var(--h1);
+}
+
+h2 {
+    font-size: var(--h2);
+}
+
+h3 {
+    font-size: var(--h3);
+}
+
+p{
+    font-size: var(--p);
+}
+
+/*-----header section-----*/
+
+.header-container {
+    background-image: linear-gradient(rgba(0,0,0,0.3)), url(/Projects/TravelWebsite/assets/images/banner.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.navbar {
+    width: 100%;
+    height: 8vh;
+    /* background-color: var(--blackShade); */
+    /* background-image: linear-gradient(rgba(0,0,0,0.5)); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.navbar img {
+    display: block;
+    width: 160px;
+    /* height: 56%; */
+    margin: auto;
+    margin-left: 10px;
+}
+
+.navbar-links-container {
+    flex-grow: 1;   /*if we are giving width here make sure to give the width on the image or image container as well*/
+    height: 100%;
+    /* background-color: bisque; */
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* background-color: brown; */
+}
+
+.nav-links li:hover a {
+    transition: 0.4s all ease-in;
+    /* text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6); */
+    /* text-shadow: 1px 1px 2px #000, 0 0 1px #fff; */
+}
+
+.nav-links li>*{    /*this means all the elements inside the li tags*/
+    padding: 0 12px;
+    color: var(--whiteShade);
+}
+
+.nav-links li:nth-of-type(1){
+    margin-left: auto;
+}
+
+.nav-links li:nth-of-type(4){
+    margin-left: auto;
+    margin-right: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: auto;
+    width: auto;
+    border-radius: 40px;
+    overflow: hidden;
+    /* background-color: aquamarine; */
+}
+
+.nav-links li:nth-of-type(4) a{
+    display: inline-block;
+    /* border-radius: 40px; */
+    background-color: var(--whiteShade);
+    color: var(--blackShade);
+    padding: 8px 20px;
+    transition: 0.5s all ease-in-out;
+}
+
+.nav-links li:nth-of-type(4):hover a{   /*i am saying here if the cursor is hovered over 4th list element i want the a tag inside that list element to have these properties changed*/ 
+    background-color: var(--RedColor);
+    color: var(--whiteShade);
+}
+
+.nav-links li:nth-of-type(4):hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+
+.nav-links li a {
+    font-size: 18px;
+    /* font-family: Sans-Bold; */
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links li::after{
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    /* margin: 0 auto; */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -12px;
+    /* margin-top: 8px; */
+    /* border: 1px solid var(--whiteShade); */
+    border-radius: 2px;
+    background-color: var(--whiteShade);
+    transition: 0.4s all ease-in-out;
+}
+
+.nav-links li:hover::after{     
+    width: 25px;
+}
+
+.nav-links li:nth-of-type(4):after{
+    display: none;
+}
+
+.hero-container {
+    width: 80%;
+    height: auto;
+    /* background-color: aqua; */
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-container h1{
+    font-size: 68px;
+    color: var(--whiteShade);
+    text-align: center;
+}
+
+.hero-container .search-bar {
+    background-color: var(--whiteShade);
+    width: 70%;
+    margin: 30px auto;
+    padding: 12px 20px;
+    border-radius: 50px;
+}
+
+.search-bar form {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+}
+
+.search-bar form div{
+    /* background-color: aquamarine; */
+}
+
+.search-bar form div:nth-child(1){
+    flex-grow: 1;
+    flex-basis: 40%;
+}
+.search-bar form div:nth-child(2){
+    flex-grow: 1;
+    flex-basis: 10%;
+}
+.search-bar form div:nth-child(3){
+    flex-grow: 1;
+    flex-basis: 10%;
+}
+.search-bar form div:nth-child(4){
+    flex-grow: 1;
+    flex-basis: 10%;
+}
+
+.search-bar form input{
+    display: block;
+}
+
+.search-bar form button{
+    display: block;
+    background: var(--RedColor);
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    /* border: 0;
+    outline: none; */
+    cursor: pointer;
+    margin: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.search-bar form button:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.search-bar form button img{
+    display: inline-block;
+    width: 16px;
+    /* background-color: beige; */
+    margin: 0 19px;
+}
+
+.location-input {
+    /* flex: 1; */     
+    /* background-color: blueviolet; */
+}
+
+.search-bar form label{
+    font-weight: 600;
+}
+
+.navbar .fa-solid {
+    display: none;
+}
+
+/*------Exclusives container section-----------*/
+
+.exclusives-container {
+    width: 90%;
+    margin: auto;
+    height: auto;
+    /* background-color: burlywood; */
+}
+
+.sub-title{
+    font-size: var(--h1);
+    color: var(--blackShade);
+    margin: 50px 0  20px;
+}
+
+.exclusives {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /*repeat says how many times we want to repeat the column and the second one says of what size do you want the columns to be*/
+    gap: 30px;
+}
+
+.exclusives div {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.exclusives div span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: var(--whiteShade);
+    background-color: transparent;
+    transition: 0.5s all ease-in-out;
+}
+
+.exclusives div:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.exclusives div:hover span{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.exclusives div img {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.exclusives div span h3, .exclusives div span p{
+    position: absolute;
+    width: 100%;
+    color: #fff;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.5s all ease-in-out;
+}
+
+.exclusives div span h3{
+    font-weight: 600;
+    font-size: var(--h6);
+}
+
+.exclusives div:hover h3{
+    opacity: 1;
+    bottom: 52%;
+}
+
+.exclusives div:hover p{
+    opacity: 1;
+    bottom: 40%;
+}
+
+/*-------trending places--------*/
+
+.trending {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 30px;
+    /* margin-bottom: 30px; */
+}
+
+.trending div {
+    cursor: pointer;
+}
+
+.trending div img {
+    width: 100%;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.trending div h3{
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: var(--h6);
+}
+
+.trending div:hover img{
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+
+/*--------------cta container-------------*/
+
+.cta-container {
+    width: 90%;
+    background-image: linear-gradient(to right, #3f2321, transparent), url(/Projects/TravelWebsite/assets/images/banner-2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 80px auto;
+    /* height: 28vh; */
+    border-radius: 10px;
+    color: var(--whiteShade);
+    padding: 5%;
+}
+
+.cta-container .cta {
+    /* width: 80%; */
+    margin: auto;
+    /* background: lightblue; */
+}
+
+.cta h1 {
+    /* font-size: 4vw; */
+    line-height: 60px;
+    font-weight: bold;
+}
+
+.cta p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.cta-btn {
+    background: var(--RedColor);
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    margin-top: 8px;
+    display: inline-block;
+    transition: all 0.5s ease-in-out;
+}
+
+.cta-btn:hover {
+    background: var(--grayShade);
+    color: var(--blackShade);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+
+/*---------stories section----------*/
+
+.stories-container {
+    width: 90%;
+    height: auto;
+    /* background: lightsalmon; */
+    margin: auto;
+}
+
+.stories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.stories div img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.stories div {
+    position: relative;
+    text-align: center;
+    transition: all 0.4s ease-in-out;
+    cursor:pointer;
+}
+
+.stories div span {
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.stories div:hover span {
+    opacity: 1;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.stories p {
+    width: 80%;
+    /* background: lightgray; */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    color: var(--whiteShade);
+    font-size: 24px;
+    /* opacity: 0; */
+    transition: all 0.5s ease-in-out;
+}
+
+.stories div:hover p {
+    bottom: 49%;
+    /* opacity: 1; */
+}
+
+.start-btn{
+    text-decoration: none;
+    background-color: var(--RedColor);
+    color: var(--whiteShade);
+    width: 80%;
+    max-width: 350px;
+    display: block;
+    text-align: center;
+    margin: 60px auto;
+    padding: 16px;
+    border-radius: 30px;
+    font-size: 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+.start-btn:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+    color: var(--blackShade);
+    background-color: var(--grayShade);
+}
+
+.about-msg {
+    text-align: center;
+    margin: 80px 0;
+    color: var(--blackShade);
+    font-size: 17px;
+}
+
+.about-msg h3 {
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+
+/*--------footer section--------*/
+.footer-container {
+    margin: 80px 0 10px;
+    width: 100%;
+    /* background: var(--blackShade); */
+}
+
+.footer {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+#line {
+    display: inline-block;
+    height: 1px;
+    width: 100%;
+    background-color: #999;
+    border: 0;
+    margin: 20px 0;
+}
+
+.footer a {
+    color: #999;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer .facebook:hover {
+    color: #1877F2;
+}
+.footer .youtube:hover {
+    color: red;
+}
+.footer .twitter:hover {
+    color: black;
+}
+.footer .linkedin:hover {
+    color: #1877F2;
+}
+.footer .instagram:hover {
+    color: #c13584;
+}
+
+.footer p {
+    padding: 16px;
+}
+
+
+
+/*------------listing page starts------------*/
+    
+.navbar-white {
+    background: var(--whiteShade);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-white .nav-links li>* {
+    color: var(--blackShade);
+}
+
+.navbar-white .nav-links li:hover a {
+    color: var(--RedColor);
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.navbar-white .nav-links li:nth-of-type(4) a {
+    background-color: var(--RedColor);
+    color: var(--whiteShade);
+}
+
+.navbar-white .nav-links li:nth-of-type(4):hover a {
+    background-color: var(--grayShade);
+    color: var(--blackShade);
+}
+
+.navbar-white .nav-links li:nth-of-type(4):hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+
+/*----listing-container---*/
+.listing-container {
+    /* background-color: lightcoral; */
+    width: 90%;
+    margin:auto;
+} 
+
+.list-container {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.left-col {
+    /* background-color: lightpink; */
+    flex-basis: 70%;
+}
+
+.left-col h2 {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.house {
+    /* background-color: lightgreen; */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px 0;
+    border-top: 1px solid #ccc;
+}
+
+.house-img {
+    flex-basis: 40%;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.house-img img {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.house-info {
+    flex-basis: 58%;
+    color: #555;
+}
+
+.house-info h3 {
+    font-weight: 600;
+    color: #333;
+    font-size: 22px;
+    margin: 4px 0;
+}
+
+.house-info i {
+    color: var(--RedColor);
+    font-size: 18px;
+    margin: 10px 1px;
+}
+
+.house-price {
+    text-align: right;
+}
+
+.house-price h4{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.house-price h4 span {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.right-col {
+    /* background-color: lightseagreen; */
+    flex-basis: 20%;
+}
+
+.sidebar {
+    border: 1px solid #999;
+    padding: 20px 30px;
+    margin-top: 30px;
+}
+
+.sidebar h3 {
+    font-weight: 600;
+    font-size: 22px;
+    margin: 20px 0 10px;
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.filter p {
+    flex: 1;
+}
+
+.sidebar .filter input {
+    appearance: checkbox;   /* helps with the checkbox ticking and making it look like a checkbox without any other styling */
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.sidebar-link {
+    text-align: right;
+    margin: 20px 0;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.pagination img {
+    width: 15px;
+    margin: 10px 20px;
+    cursor: pointer;
+}
+
+.pagination .right-arrow {
+    transform: rotate(180deg);
+}
+
+.pagination span {
+    margin: 10px 8px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.pagination .current {
+    background: #333;
+    color: var(--whiteShade);
+}
+
+/*------------listing page ends here------------*/
+
+
+
+/*------------house page starts here------------*/
+.house-details-container{
+    width: 100%;
+    margin: auto;
+    /* background: lightsalmon; */
+}
+
+.house-details {
+    padding: 0 12%;
+}
+
+.house-title {
+    margin-top: 50px;
+}
+
+.house-title h2{
+    font-weight: 600;
+}
+
+.house-title .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.house-title span {
+    margin: 0 20px;
+}
+
+.house-title i {
+    color: var(--RedColor);
+    font-size: 14px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-areas: 'first first . .'
+                         'first first . .';
+    gap: 10px;  
+    margin: 20px 0;
+}
+
+.gallery div {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.gallery div img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.gallery-img-1 {
+    grid-area: first;
+}
+
+.small-details h2 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.small-details h4 {
+    text-align: right;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.small-details span {
+    font-weight: 500;
+}
+
+#line-house{
+    display: inline-block;
+    height: 1px;
+    width: 100%;
+    max-width: 800px;
+    background-color: #999;
+    border: 0;
+    margin: 20px 0 50px;
+}
+
+.check-form {
+    margin: 30px 0;
+    background: var(--grayShade);
+    box-shadow: 0 0 30px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* justify-content: space-around; */
+    padding: 10px 50px;
+}
+
+.check-form label {
+    display: block;
+    /* background-color: #1877F2; */
+}
+
+.check-form input {
+    /* border: solid 1px #ccc; */
+}
+
+.check-form div {
+    padding: 20px;
+}
+
+.check-form button {
+    background: var(--RedColor);
+    color: var(--whiteShade);
+    padding: 18px;
+    width: 350px;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.check-form button:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+    color: var(--blackShade);
+    background-color: var(--grayShade);
+}
+
+.guest-field {
+    flex: 1;
+}
+
+.details-list {
+    margin: 50px 0;
+}
+
+.details-list li {
+    margin-left: 50px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #555;
+    position: relative;
+}
+
+.details-list li span {
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.details-list li i {
+    position: absolute;
+    top: 5px;
+    left: -40px;
+}
+
+.home-desc {
+    max-width: 700px;
+    margin-bottom: 50px;
+}
+
+.map {
+    margin: 50px 0;
+}
+
+.map iframe {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.map h3 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.map b {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 16px;
+}
+
+
+.host {
+    display: flex;
+    align-items: center;
+}
+
+.host img {
+    width: 80px;
+    border-radius: 50px;
+    margin-right: 30px;
+}
+
+.host h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.host i {
+    color: var(--RedColor);
+}
+
+.contact-host {
+    display: inline-block;
+    margin: 40px 0 40px 120px;
+    color: #555;
+    padding: 15px 50px;
+    border: 1px solid var(--RedColor);
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.contact-host:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+    color: var(--whiteShade);
+    background-color: var(--RedColor);
+}
+
+
+/*------------for mobile and tablet viewport------------*/
+
+@media only screen and (max-width: 800px) {
+
+    .sub-title {
+        font-size: var(--h3);
+    }
+
+    .navbar {
+        position: fixed;
+        background-color: var(--blackShade);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    .navbar .fa-bars {
+        margin-right: 16px;
+    }
+
+    .nav-links li:hover a {
+        transition: 0.4s all ease-in;
+        text-shadow: unset;
+    }
+
+    .nav-links .fa-xmark {
+        display: block;
+        width: 100%;
+        margin-bottom: 0;
+        padding: 20px 0 20px 8px;
+    }
+
+    .nav-links li:hover::after {
+        width: 0;
+    }
+
+    .nav-links li:nth-of-type(4):hover {
+        box-shadow: unset;
+    }
+
+
+     .nav-links li:nth-of-type(4):hover a{
+        background-color: unset;
+        color: var(--whiteShade);
+        box-shadow: unset;
+     }
+    
+    .nav-links li:nth-of-type(4) {
+        margin: unset;
+        padding: unset;
+        border-radius: unset;
+    }
+
+    .nav-links li:nth-of-type(4) a {
+        all: unset;
+        background-color: unset;
+        font-family: Sans-Regular;
+        font-size: 18px;
+        color: var(--whiteShade);
+        padding-left: 14px;
+        transition: 0.3s all ease-in-out;
+    }   
+
+    .navbar-links-container .nav-links li {
+        margin: 12px 0;
+        padding: 20px 8px 20px 0;
+        transition: 0.3s all ease-in-out;
+    }
+
+    .navbar .fa-solid {
+        display: block;
+        font-size: 28px;
+        color: var(--whiteShade);
+        cursor: pointer;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 0;
+        right: -20vh; 
+        flex-direction: column;
+        height: 100vh;
+        width: 20vh;
+        background-color: var(--blackShade);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .navbar-links-container .nav-links li, .fa-xmark {
+        /* background-color:blue; */
+        display: block;
+        width: 100%;
+    }
+
+    .nav-links li:hover a{
+        color: var(--RedColor);
+    }
+
+    .nav-links li:nth-of-type(4):hover a {
+        color: var(--RedColor);
+    }
+
+    .navbar .fa-solid:hover{
+        transition: all 0.3s ease-in-out;
+        color: var(--RedColor);
+    }
+
+    .hero-container .search-bar {
+        width: 80%;
+        margin: 30px auto;
+        padding: 20px 10px 30px;
+        border-radius: 8px;
+        position: relative;
+        /* background-color: #ff5361; */
+    }
+
+    .hero-container .search-bar form {
+        display: block;
+    }
+
+    .search-bar form input {
+        border-bottom: 1px solid #ddd;
+        width: 100%;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .search-bar form button{ 
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%,50%);
+    }
+
+    
+
+    /*-------hero-container--------*/
+    .hero-container h1{
+        font-size: var(--h2);
+    }
+
+
+    /*--------exclusives container----------*/
+
+    .exclusives {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    /*-----cta container---------*/
+
+    .cta {
+        padding: 5% 0;
+    }
+    .cta h1 {
+        font-size: var(--h4);
+        line-height: 40px;
+    }
+
+    .cta p {
+        font-size: var(--p);
+    }
+
+    .cta-btn {
+        padding: 6px 15px;
+        border-radius: 4px;
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+    /*-----stories container---------*/
+    .stories {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .stories p {
+        font-size: 22px;
+    }
+
+
+    /*-----listing page starts here---------*/
+    .navbar-white {
+        background-color: var(--whiteShade);
+    }
+
+    .navbar-white .fa-solid {
+       color: var(--blackShade);
+    }
+
+    .navbar-white .nav-links {
+        background-color: var(--grayShade);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .navbar-white .nav-links li:nth-of-type(4):hover {
+        box-shadow: unset;
+    }
+
+    .navbar-white .nav-links li:hover a{
+        color: var(--RedColor);
+    }
+
+    .navbar-white .nav-links li:nth-of-type(4):hover a {
+        color: var(--whiteShade);
+    }
+
+    .navbar-white .nav-links li:nth-of-type(4) a{
+        background-color: unset;
+        color: var(--blackShade);
+    }
+
+    .navbar-white .nav-links li:nth-of-type(4):hover a{
+        color: var(--RedColor);
+        box-shadow: unset;
+    }
+
+
+    /*----listing-container---*/
+    .listing-container {
+        margin-top: 13.3vh;
+    }
+
+    .left-col, .right-col, .house-img, .house-info {
+        flex-basis: 100%;
+    }
+
+    .left-col h2 {
+        font-size: 22px;
+    }
+
+    .house-info h3{
+        font-size: 18px;
+    }
+
+    .house-info i {
+        font-size: 16px;
+    }
+
+    .pagination span {
+        font-size: 12px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        margin: 10px 2px;
+    }
+
+    /*-----listing page ends here---------*/
+
+
+    /*-----housing page starts here---------*/
+
+    .house-details-container { 
+        margin-top: 13.3vh;
+    }
+
+    .row p {
+        margin-top: 10px;
+    }
+
+    .gallery {
+        grid-template-areas: 'first first'
+                             '. .'
+                             '. .';
+    }
+
+    .small-details h2 {
+        font-size: 20px;
+        margin-top: 25px;
+    }
+
+    .small-details h4 {
+        text-align: left;
+        margin: 10px 0;
+        font-size: 18px;
+    }
+
+    .check-form {
+        padding: 10px 30px;
+    }
+
+    .check-form div {
+        padding: 20px 0;
+        width: 100%;
+    }
+
+    .check-form input {
+        border-bottom: 1px solid #ccc;
+        width: 100%;
+        padding-bottom: 5px;
+    }
+
+    .check-form button {
+        font-size: 14px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        border-radius: 4px;
+    }
+
+    .host {
+        display: block;
+        line-height: 28px;
+    }
+
+    .contact-host {
+        margin: 40px 0;
+    }
+
+    /*-----housing page ends here---------*/
+
+}
