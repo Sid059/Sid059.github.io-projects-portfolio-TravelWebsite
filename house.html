@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website Design</title>
+    <link rel="stylesheet" href="/Projects/TravelWebsite/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css">
+</head>
+<body>
+    <section class="header-housing-container">
+        <div class="navbar navbar-white">
+            <a href="/Projects/TravelWebsite/html/index.html"><img src="/Projects/TravelWebsite/assets/images/logo-red.png" alt="redLogoImage"></a>
+            <div class="navbar-links-container">
+                <ul class="nav-links">
+                    <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                    <li><a href="/Projects/TravelWebsite/html/index.html" class="active">Popular Places</a></li>
+                    <li><a href="/Projects/TravelWebsite/html/house.html">Travel Outside</a></li>
+                    <li><a href="/Projects/TravelWebsite/html/listing.html">Online Packages</a></li>
+                    <li><a href="#">Register Now</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </div>
+    </section>
+
+    <section class="house-details-container">
+        <div class="house-details">
+            <div class="house-title">
+                <h2>Wenge House</h2>
+                <div class="row">
+                    <div>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <span>245 Reviews</span>
+                    </div>
+                    <div>
+                        <p>Location: San Francisco, California, United States</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery">
+                <div class="gallery-img-1">
+                    <img src="/Projects/TravelWebsite/assets/images/house-1.png" alt="">
+                </div>
+                <div>
+                    <img src="/Projects/TravelWebsite/assets/images/house-2.png" alt="">
+                </div>
+                <div>
+                    <img src="/Projects/TravelWebsite/assets/images/house-3.png" alt="">
+                </div>
+                <div>
+                    <img src="/Projects/TravelWebsite/assets/images/house-4.png" alt="">
+                </div>
+                <div>
+                    <img src="/Projects/TravelWebsite/assets/images/house-5.png" alt="">
+                </div>
+            </div>
+            <div class="small-details">
+                <h2>Entire rental unit hosted by Brandon</h2>
+                <p>2 guests &nbsp; &nbsp; 2 beds &nbsp; &nbsp; 1 bathroom</p>
+                <h4>$100 <span>/ day</span></h4>
+            </div>
+
+            <hr id="line-house">
+
+            <form action="" method="post" class="check-form">
+                <div>
+                    <label for="">Check-in</label>
+                    <input type="text" placeholder="Add Date">
+                </div>
+                <div>
+                    <label for="">Check-out</label>
+                    <input type="text" placeholder="Add Date">
+                </div>
+                <div class="guest-field">
+                    <label for="">Guest</label>
+                    <input type="text" placeholder="2 guests">
+                </div>
+                <button type="submit">Check Availability</button>
+            </form>
+
+            <ul class="details-list">
+                <li><i class="fa-solid fa-house-chimney"></i>Entire Home
+                    <span>You will have the entire flat to yourself.</span>
+                </li>
+                <li><i class="fa-solid fa-broom"></i>Enhances Clean
+                    <span>This host has committed to Staybnb's cleaning process.</span>
+                </li>
+                <li><i class="fa-solid fa-location-dot"></i>Great Location
+                    <span>99% of recent guests gave the location a 5-star rating.</span>
+                </li>
+                <li><i class="fa-solid fa-heart"></i>Great Check-in Experience
+                    <span>100% of recent guests gave the Check-in Experience a 5-star rating.</span>
+                </li>
+            </ul>
+
+            <hr id="line-house">
+            <p class="home-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro sapiente error non itaque ipsa doloribus tempore maiores accusamus consequuntur voluptas perspiciatis quas cumque, molestiae aliquam dolores nulla cupiditate minima quam ab. Atque temporibus ea esse doloribus similique? Molestiae recusandae dolorem, nostrum suscipit illo necessitatibus esse accusantium architecto laudantium, debitis quam, minima voluptates! Ut nisi eligendi ducimus ad pariatur dicta earum.</p>
+            <hr id="line-house">
+
+            <div class="map">
+                <h3>Location on map</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24726.040803317723!2d-1.0990084340215238!3d51.26321525938279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4874222ca9aecb3f%3A0xa4ee8063f7d61210!2sHoliday%20Inn%20Basingstoke%20by%20IHG!5e1!3m2!1sen!2suk!4v1752784904612!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <b>Holiday Inn, Basingstoke, UK</b>
+                <p>It's located in the heart of Basingstoke, just a short walk from the train station.</p>
+            </div>
+
+            <hr id="line-house">
+
+            <div class="host">
+                <img src="/Projects/TravelWebsite/assets/images/host.png" alt="">
+                <div>
+                    <h2>Hosted by Brandon</h2>
+                    <p>
+                        <span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </span> &nbsp; &nbsp; 245 reviews &nbsp; &nbsp; Response Rate 100% &nbsp; &nbsp; Response Time: 60 min
+                    </p>
+                </div>
+            </div>
+
+            <a href="#" class="contact-host">Contact Host</a>
+        </div>
+    </section>
+
+    <section class="footer-container">
+        <div class="footer">
+            <a href="https://facebook.com/" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://youtube.com/" class="youtube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://twitter.com/" class="twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://linkedin.com/" class="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://instagram.com/" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+            <hr id="line">
+            <p>Copyright &copy; 2025, Siddharth Rai.</p>
+        </div>
+    </section>
+
+    <script src="/Projects/TravelWebsite/js/menu_bar.js"></script>
+    <script src="/Projects/TravelWebsite/js/typing_text.js"></script>
+</body>
+</html>
